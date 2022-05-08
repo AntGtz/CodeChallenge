@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "node ./app/lib/server.js",
+    "server": "node ./server.js",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest",
     "linter": "node ./node_modules/eslint/bin/eslint.js .",
     "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
