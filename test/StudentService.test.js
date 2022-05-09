@@ -9,14 +9,14 @@ describe("Unidad de pruebas para service", () => {
         const StudentService = require("./../lib/services/StudentService");
         const Reader = require("./../lib/utils/Reader"); 
         const info = Reader.readJsonFile("./students.json");
-        const first = {"credits": 508, "email": "Todd@visualpartnership.xyz", "enrollments": ["Visual Thinking Intermedio", "Visual Thinking Avanzado"], "haveCertification": true, "id": "6264d5d89f1df827eb84bb23", "name": "Warren", "previousCourses": 1}
+        const first = "Todd@visualpartnership.xyz";
         expect(StudentService.getStudentsWithCertification(info, true)[0]).toStrictEqual(first);
     });
     test("3)Recibir students que tengan mas de 500 creditos", () => {
         const StudentService = require("./../lib/services/StudentService");
         const Reader = require("./../lib/utils/Reader"); 
         const info = Reader.readJsonFile("./students.json");
-        const first = {"credits": 508, "email": "Todd@visualpartnership.xyz", "enrollments": ["Visual Thinking Intermedio", "Visual Thinking Avanzado"], "haveCertification": true, "id": "6264d5d89f1df827eb84bb23", "name": "Warren", "previousCourses": 1}
+        const first = {"credits": 508, "email": "Todd@visualpartnership.xyz", "enrollments": ["Visual Thinking Intermedio", "Visual Thinking Avanzado"], "haveCertification": true, "id": "6264d5d89f1df827eb84bb23", "name": "Warren", "previousCourses": 1};
         expect(StudentService.getStudentsWithCredits(info, "500")[0]).toStrictEqual(first);
     });
 });
